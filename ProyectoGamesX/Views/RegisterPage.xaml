@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoGamesX.Views.RegisterPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="1">
+                <Image WidthRequest="0"
+                       HeightRequest="100"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                <Label Text ="Registro" TextColor="#40375c" HorizontalTextAlignment="Center" FontSize="Large" WidthRequest="300"/>
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+                <Label
+                    Text="Email"
+                   
+                    TextColor="#5a4f7c"
+                    />
+                <Frame
+                    HasShadow="true"
+                    Padding="6"
+                    CornerRadius="7"
+                    BackgroundColor="#292929">
+                    <Entry
+                    Placeholder="Gmaes@gmail.com"
+                    PlaceholderColor="White"
+                    Keyboard="Email"
+                    MaxLength="25"
+                    FontSize="15"
+                    Text="{Binding EmailTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="White"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Grid.Row="4" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+
+                <Label
+                    Text="Password"
+                    FontSize="13"
+                    TextColor="#5a4f7c"
+                    />
+
+                <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929" 
+                    >
+
+                    <Entry
+                    Placeholder="******************"
+                    PlaceholderColor="White"
+                    MaxLength="25"
+                    IsPassword="True"
+                    FontSize="15"
+                    Text="{Binding PasswordTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="White"/>
+
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="5" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10">
+                <Label
+                     Text="Usuario"
+                     FontSize="13"
+                     TextColor="#5a4f7c"/>
+
+                <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929"
+                    >
+
+                    <Entry
+                    Placeholder="ELBaneado"
+                        PlaceholderColor="White"
+                    MaxLength="25"
+                    Keyboard="Text"
+                    FontSize="15"
+                    Text="{Binding NameTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="White"/>
+
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="6" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10">
+                <Frame Padding="0,4,0,4" HasShadow="True">
+                    <Button Text="Registrarse" 
+                            HeightRequest="35"
+                            WidthRequest="185" 
+                            BackgroundColor="Black"  
+                            TextColor="#f14235" 
+                            FontSize="15" 
+                            Command="{Binding RegisterCommand}"
+                           />
+                </Frame>
+            </StackLayout>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

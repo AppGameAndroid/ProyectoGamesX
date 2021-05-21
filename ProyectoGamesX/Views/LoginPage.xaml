@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyectoGamesX.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="BG05.jpg">
+    <ContentPage.Content>
+        <Grid RowSpacing="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+            </Grid.RowDefinitions >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                <Image WidthRequest="0"
+                       HeightRequest="100"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" HorizontalOptions="Center" Grid.ColumnSpan="2">
+
+                <Image Source="Profile1.jpg" HeightRequest="100" WidthRequest="100" TranslationY="0" />
+                <Label Text ="Iniciar Sesión" TextColor="White" HorizontalTextAlignment="Center" FontSize="Large" WidthRequest="300"/>
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="4" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="15" Grid.ColumnSpan="2">
+                <Label
+                     Text="Correo"
+                     FontSize="13"
+                     TextColor="white"/>
+
+                <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929"
+                    >
+
+                    <Entry
+                    Placeholder="2424@mail.com"
+                    PlaceholderColor="White"
+                        
+                    MaxLength="25"
+                    Keyboard="Email"
+                    FontSize="15"
+                    Text="{Binding EmailTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="White"
+                        x:Name="a"/>
+
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Grid.Row="5" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="5" Grid.ColumnSpan="2">
+
+                <Label
+                    Text="Password"
+                    FontSize="13"
+                    TextColor="White"
+                    />
+
+                <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929" 
+                    >
+
+                    <Entry
+                    Placeholder="******************"
+                    PlaceholderColor="White"
+                    MaxLength="25"
+                    IsPassword="True"
+                    FontSize="15"
+                    Text="{Binding PasswordTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="White"
+                        x:Name="b"/>
+
+
+                </Frame>
+
+
+
+            </StackLayout>
+
+
+
+            <StackLayout Grid.Row="6" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" Grid.ColumnSpan="2">
+                <Frame Padding="0,4,0,4" HasShadow="True">
+                    <Button Text="Ingresar" 
+                            HeightRequest="35" 
+                            WidthRequest="185" 
+                            BackgroundColor="Black"  
+                            TextColor="White" 
+                            FontSize="15" 
+                            Command="{Binding LoginCommand}"
+                            />
+                </Frame>
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="7"   HorizontalOptions="Center"  Orientation="Vertical">
+
+
+
+
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="8" Grid.Column="0" Spacing="0" BackgroundColor="#00000000"  Orientation="Horizontal" HorizontalOptions="Center">
+
+
+                <Button Text="Contraseña Olvidada"
+                 BackgroundColor="#00000000"
+                 TextColor="white"
+                 FontSize="11"
+                 IsEnabled="{Binding IsEnabledTxt}"
+                 Command="{Binding Forget}"
+                 />
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="8" Grid.Column="1"  Spacing="0" BackgroundColor="Black" Orientation="Horizontal" HorizontalOptions="Start">
+
+                <Frame Padding="0,4,0,4" HasShadow="True">
+                    <Button Text="Registrarse" 
+                            HeightRequest="35" 
+                            WidthRequest="150" 
+                            BackgroundColor="Black"  
+                            TextColor="White" 
+                            FontSize="12" 
+                          
+                            Command="{Binding RegisterP}"/>
+                </Frame>
+
+            </StackLayout>
+
+
+        </Grid>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

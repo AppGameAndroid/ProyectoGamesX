@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoGamesX.Views.ProfilePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition   Height="Auto"/>
+                        <RowDefinition   Height="Auto"/>
+                        <RowDefinition   Height="*"/>
+                        <RowDefinition   Height="*"/>
+                        <RowDefinition   Height="Auto"/>
+                    </Grid.RowDefinitions >
+
+                    <!-- Heder BG -->
+
+                    <BoxView BackgroundColor="black"  HeightRequest="100" Grid.Row="1"/>
+                    <BoxView BackgroundColor="AliceBlue" Grid.Row="0"/>
+
+
+
+
+                    <Image Source="D2bg.jpg" Aspect="AspectFill" HeightRequest="150"/>
+                    <Image Source="MC2.png" Aspect="Fill"   VerticalOptions="End"  HeightRequest="25"/>
+
+                    <!-- IG Profile-->
+                    <Image Source="Profile.png" HeightRequest="25" WidthRequest="25" TranslationY="50" />
+                    <!-- Profile NickName -->
+                    <StackLayout Grid.Row="1" Padding="0,50,0,0">
+                        <Label Text ="Master Chief 69" TextColor="White" HorizontalTextAlignment="Center" FontSize="Large"/>
+
+                    </StackLayout>
+
+                    <!-- Status -->
+                    <Grid Grid.Row="1" Padding="0,125,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Column="0" >
+                            <Label Text ="500" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                            <Label Text ="Games" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" >
+                            <Label Text ="1.5k" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                            <Label Text ="Seguidores" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="2" >
+                            <Label Text ="1k" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                            <Label Text ="Logros" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+                        </StackLayout>
+
+                    </Grid>
+                    <BoxView BackgroundColor="black" Grid.Row="3"/>
+                    <!-- Follow Button -->
+
+                    <Button Text="Ver mas" 
+                            TextColor="white" 
+                            BackgroundColor="Gray"  
+                            Grid.Row="4" VerticalOptions="End" 
+                            HeightRequest="50" 
+                            WidthRequest="100"
+                            Margin="100,50"/>
+
+                </Grid>
+
+
+
+                <BoxView BackgroundColor="Black" Grid.Row="2"/>
+
+                <!-- Games Review-->
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

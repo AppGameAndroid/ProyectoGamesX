@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoGamesX.Views.ForgetPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0" BackgroundColor="#CC000000" >
+            <Grid.RowDefinitions>
+                <RowDefinition   Height="*"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+
+            </Grid.RowDefinitions >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                <Frame Padding="0,1,0,1" HasShadow="True">
+                    <Label Text ="Reset contraseña" TextColor="Red" BackgroundColor="#" HorizontalTextAlignment= "Center" FontSize="Large" WidthRequest="300" Padding="25"/>
+                </Frame>
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="4" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10">
+                <Label Text ="Escriba el correo con el que se registro la cuenta" TextColor="White" HorizontalTextAlignment= "Center" FontSize="Medium" WidthRequest="300"/>
+                <Entry
+                    Placeholder="Correo"
+                        PlaceholderColor="White"
+                    MaxLength="25"
+                    Keyboard="Text"
+                    FontSize="15"
+                    Text="{Binding NameTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="White"
+                        x:Name="a"/>
+
+                <Frame Padding="0,4,0,4" HasShadow="True">
+                    <Button Text="Enviar" 
+                            HeightRequest="35"
+                            WidthRequest="185" 
+                            BackgroundColor="Black"  
+                            TextColor="#f14235" 
+                            FontSize="15" 
+                            Command="{Binding RegistroCommand}"
+                            
+                             />
+                </Frame>
+            </StackLayout>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
