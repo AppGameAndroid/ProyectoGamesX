@@ -1,12 +1,258 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoGamesX.Views.Configuraciones">
+             x:Class="ProyectoGamesX.Views.Configuraciones"
+             BackgroundImageSource="BG002">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Grid RowSpacing="0" BackgroundColor="#CC121212 ">
+                <Grid.RowDefinitions>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                    <RowDefinition   Height="Auto"/>
+                </Grid.RowDefinitions >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="1">
+                    <Image WidthRequest="0"
+                       HeightRequest="100"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Label Text ="Configuraciones" TextColor="white" HorizontalTextAlignment="Center" FontSize="Large" WidthRequest="300"/>
+
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+                    <Label
+                    Text="Cambiar Email"
+                   
+                    TextColor="White"
+                    />
+                    <Frame
+                    HasShadow="true"
+                    Padding="6"
+                    CornerRadius="7"
+                    BackgroundColor="#292929">
+                        <Entry
+                    Placeholder="Gmaes@gmail.com"
+                    PlaceholderColor="White"
+                    Keyboard="Email"
+                    MaxLength="25"
+                    FontSize="15"
+                    Text="{Binding EmailTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="#0096d2"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+
+                    <Label
+                    Text="Cambioar Contraseña"
+                    FontSize="13"
+                    TextColor="white"
+                    />
+
+                    <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929" 
+                    >
+
+                        <Entry
+                    Placeholder="******************"
+                    PlaceholderColor="White"
+                    MaxLength="25"
+                    IsPassword="True"
+                    FontSize="15"
+                    Text="{Binding PassTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="#0096d2"/>
+
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10">
+                    <Label
+                     Text="Cambiar Usuario"
+                     FontSize="13"
+                     TextColor="White"/>
+
+                    <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929"
+                    >
+
+                        <Entry
+                    Placeholder="Perone"
+                        PlaceholderColor="White"
+                    MaxLength="25"
+                    Keyboard="Text"
+                    FontSize="15"
+                    Text="{Binding NameTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="#0096d2"/>
+
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="6" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+                    <Label
+                    Text="Edad"
+                   
+                    TextColor="white"
+                    />
+                    <Frame
+                    HasShadow="true"
+                    Padding="6"
+                    CornerRadius="7" 
+                    BackgroundColor= "#292929" >
+                        <Entry
+                    Placeholder="Gmaes@gmail.com"
+                    PlaceholderColor="White"
+                    Keyboard="Numeric"
+                    MaxLength="2"
+                    FontSize="15"
+                   
+                    Text="{Binding EmailTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="#0096d2"/>
+
+                    </Frame>
+
+
+                    <StackLayout Grid.Row="7" HorizontalOptions="Center" WidthRequest="325" Orientation="Vertical" Padding="10" >
+                    <Label
+                    Text="Idioma"
+                   
+                    TextColor="white"
+                    />
+                    <Frame
+                    HasShadow="true"
+                        
+                    Padding="6"
+                    CornerRadius="7"
+                    BackgroundColor="#292929">
+                            <Picker x:Name="a" Title="Select" TextColor="#0096d2">
+                            <Picker.Items>
+                                <x:String>Español</x:String>
+                                <x:String>Ingles</x:String>
+                                <x:String>Japones</x:String>
+                                <x:String>Portugues</x:String>
+
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="8" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+
+                    <Label
+                    Text="Modo Oscuro"
+                    FontSize="13"
+                    TextColor="white"
+                    />
+
+                    <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929" 
+                    >
+
+                            <Picker x:Name="b" Title="Select" TextColor="#0096d2">
+                            <Picker.Items>
+                                <x:String>Activado</x:String>
+                                <x:String>Desactivado</x:String>
+
+                            </Picker.Items>
+                        </Picker>
+
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="9" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10">
+                    <Label
+                     Text="Pais"
+                     FontSize="13"
+                     TextColor="White"/>
+
+                    <Frame
+                     HasShadow="True"
+                     Padding="6"
+                     CornerRadius="7"
+                     BackgroundColor="#292929"
+                    >
+
+                            <Picker x:Name="c" Title="Select" TextColor="#0096d2">
+                            <Picker.Items>
+                                <x:String>El Salvador</x:String>
+                                <x:String>United States</x:String>
+                                <x:String>Panama</x:String>
+                                <x:String>Mexico</x:String>
+
+                            </Picker.Items>
+                        </Picker>
+
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="10" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10" >
+                    <Label
+                    Text="Numero de la Suerte"
+                   
+                    TextColor="white"
+                    />
+                    <Frame
+                    HasShadow="true"
+                    Padding="6"
+                    CornerRadius="7" 
+                    BackgroundColor= "#292929" >
+                        <Entry
+                    Placeholder="19"
+                    PlaceholderColor="White"
+                    Keyboard="Numeric"
+                    MaxLength="2"
+                    FontSize="15"
+                   
+                    Text="{Binding EmailTxt, Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    TextColor="#0096d2"
+                             x:Name="d" />
+
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="11" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="10">
+                    <Frame Padding="0,4,0,4" HasShadow="True">
+                        <Button Text="Guardar cambios" 
+                            HeightRequest="35"
+                            WidthRequest="185" 
+                            BackgroundColor="Black"  
+                            TextColor="#0096d2" 
+                            FontSize="15" 
+                            
+                            Clicked="Button_Clicked"/>
+                    </Frame>
+                </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

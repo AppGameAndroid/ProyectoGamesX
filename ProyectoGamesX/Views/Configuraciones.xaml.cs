@@ -16,5 +16,13 @@ namespace ProyectoGamesX.Views
         {
             InitializeComponent();
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Application.Current.MainPage.DisplayAlert(
+                    "OK",
+                    "Cambios Guardados.",
+                    "Accept");
+        }
     }
 }

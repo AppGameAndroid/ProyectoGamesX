@@ -16,7 +16,7 @@
                     HasUnevenRows="True"
                     IsPullToRefreshEnabled="True"
                     IsRefreshing="{Binding IsRefreshing}"
-                    x:Name="ListViewName"
+                  
                     
                     
                     >
