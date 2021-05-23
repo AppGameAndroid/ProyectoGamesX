@@ -9,11 +9,7 @@
     <PackageReference Include="FirebaseAuthentication.net" Version="3.7.1" />
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.11" />
     <PackageReference Include="sqlite-net" Version="1.6.292" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
-    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.osx" Version="1.1.14" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />  
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />  
@@ -21,25 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\VideoJuegosPage.xaml.cs">
-      <DependentUpon>VideojuegosPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Views\Configuraciones.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\FavoriteDetailsPop.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Favoritepage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\ForgetPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\FriendsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProfilePage.xaml">
@@ -48,11 +26,9 @@
     <EmbeddedResource Update="Views\RegisterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\VideojuegosPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\VJPop.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

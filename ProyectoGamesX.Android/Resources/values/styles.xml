@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
 
-	<style name="MainTheme" parent="MainTheme.Base">
-		<item name="colorAccent">#0096d2</item>
-
-	</style>
-
 	<style name="MainTheme.Launcher">
 		<item name="android:windowBackground">@drawable/launcher</item>
-		
-		
 	</style>
 	<style name="MainTheme.Splash">
 		<item name="android:windowBackground">@android:color/white</item>

@@ -127,7 +127,6 @@ namespace ProyectoGamesX.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", "Invalid useremail or password", "OK");
-                await Shell.Current.GoToAsync($"//ProfilePage");
             }
 
             this.IsVisibleTxt = true;
