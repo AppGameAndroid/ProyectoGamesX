@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoGamesX.Views.RegisterPage">
+             x:Class="ProyectoGamesX.Views.RegisterPage"
+             Shell.NavBarHasShadow="false"
+             BackgroundImageSource="BG001">
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
@@ -23,8 +25,11 @@
                        HeightRequest="100"/>
             </StackLayout>
 
-            <StackLayout Grid.Row="2" HorizontalOptions="Center">
-                <Label Text ="Registro" TextColor="#40375c" HorizontalTextAlignment="Center" FontSize="Large" WidthRequest="300"/>
+
+            <Frame  Grid.Row="4" Grid.ColumnSpan="2"  CornerRadius="30"  BackgroundColor="#CC000000" Margin="20" TranslationY="-10">
+                <StackLayout Grid.Row="4" HorizontalOptions="Center" WidthRequest="350"  Grid.ColumnSpan="2" BackgroundColor= "Transparent" >
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                <Label Text ="Registro" TextColor="white" HorizontalTextAlignment="Center" FontSize="Large" WidthRequest="300"/>
 
 
             </StackLayout>
@@ -33,7 +38,7 @@
                 <Label
                     Text="Email"
                    
-                    TextColor="#5a4f7c"
+                    TextColor="White"
                     />
                 <Frame
                     HasShadow="true"
@@ -57,7 +62,7 @@
                 <Label
                     Text="Password"
                     FontSize="13"
-                    TextColor="#5a4f7c"
+                    TextColor="White"
                     />
 
                 <Frame
@@ -85,7 +90,7 @@
                 <Label
                      Text="Usuario"
                      FontSize="13"
-                     TextColor="#5a4f7c"/>
+                     TextColor="white"/>
 
                 <Frame
                      HasShadow="True"
@@ -112,13 +117,15 @@
                             HeightRequest="35"
                             WidthRequest="185" 
                             BackgroundColor="Black"  
-                            TextColor="#f14235" 
+                            TextColor="SkyBlue" 
                             FontSize="15" 
                             Command="{Binding RegisterCommand}"
                            />
                 </Frame>
             </StackLayout>
+                </StackLayout>
 
+            </Frame>
 
         </Grid>
     </ContentPage.Content>
