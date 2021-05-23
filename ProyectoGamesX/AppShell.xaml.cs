@@ -11,12 +11,13 @@ namespace ProyectoGamesX
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(ForgetPage), typeof(ForgetPage));
-
+            Routing.RegisterRoute(nameof(VideoJuegosPage), typeof(VideoJuegosPage));
+            Routing.RegisterRoute(nameof(Favoritepage), typeof(Favoritepage));
+            Routing.RegisterRoute(nameof(Configuraciones), typeof(Configuraciones));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace ProyectoGamesX
         {
             InitializeComponent();
            
-            DependencyService.Register<MockDataStore>();
+           
             MainPage = new AppShell();
         }
 
