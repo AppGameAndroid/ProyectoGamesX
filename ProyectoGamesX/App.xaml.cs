@@ -3,12 +3,19 @@ using ProyectoGamesX.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ProyectoGamesX.Data;
+using System.IO;
 
 namespace ProyectoGamesX
 {
     public partial class App : Application
     {
+        
 
+
+       
+            
+        
         public App()
         {
             InitializeComponent();
@@ -28,5 +35,5 @@ namespace ProyectoGamesX
         protected override void OnResume()
         {
         }
-    }
+       }
 }

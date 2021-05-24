@@ -23,7 +23,7 @@ namespace ProyectoGamesX.Data
 
         public Task<List<Videojuegos>> GetJuego ()
         {
-            return _database.QueryAsync<Videojuegos>("Select * from User");
+            return _database.QueryAsync<Videojuegos>("Select * from Videojuegos");
         }
 
         // Insertar y Actualizar 
@@ -41,7 +41,7 @@ namespace ProyectoGamesX.Data
         }
 
         //delete
-        public Task<int> DeleteUserAsync(Videojuegos juego)
+        public Task<int> DeleteJuego(Videojuegos juego)
         {
             return _database.DeleteAsync(juego);
 

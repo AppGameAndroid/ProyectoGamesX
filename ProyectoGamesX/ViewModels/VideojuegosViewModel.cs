@@ -84,7 +84,8 @@ namespace ProyectoGamesX.ViewModels
                 Sinopsiss = Sinopsis,
             };
 
-            
+           
+
 
             this.IsRefreshing = true;
 

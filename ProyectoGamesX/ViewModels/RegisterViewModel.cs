@@ -87,7 +87,7 @@ namespace ProyectoGamesX.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "You must enter an email.",
+                    "Debes escribir un correo",
                     "Accept");
                 return;
             }
@@ -96,8 +96,8 @@ namespace ProyectoGamesX.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "You must enter a password.",
-                    "Accept");
+                    "Debes escribir una contraseña.",
+                    "Acceptar");
                 return;
             }
 

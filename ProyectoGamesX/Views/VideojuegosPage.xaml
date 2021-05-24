@@ -1,51 +1,145 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoGamesX.Views.VideoJuegosPage">
+             x:Class="ProyectoGamesX.Views.VideoJuegosPage"
+             Title="Busqueda"
+            BackgroundImageSource="BG003">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
-    </ContentPage.ToolbarItems>
-    
     <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="10" >
+            <Grid.RowDefinitions>
+                <RowDefinition   Height="auto"/>
+                <RowDefinition   Height="auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="Auto"/>
+                <RowDefinition   Height="*"/>
+                </Grid.RowDefinitions >
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto " />
+                    <ColumnDefinition Width="auto " />
+                </Grid.ColumnDefinitions>
 
-       
-        <StackLayout>
-            <ListView
-                    ItemsSource="{Binding ListViewSource}"
-                    HasUnevenRows="True"
-                    IsPullToRefreshEnabled="True"
-                    IsRefreshing="{Binding IsRefreshing}"
-                  
-                    
-                    
-                    >
 
-                <ListView.ItemTemplate >
-                    <DataTemplate  >
-                        <ViewCell>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="60"/>
-                                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0"  Grid.ColumnSpan="2" HorizontalOptions="Center" HeightRequest="100" Orientation="Vertical"   TranslationY="-25" BackgroundColor="Transparent">
+                   
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
+                    <ImageButton 
+                             Source="barra"
+                        HeightRequest="175"
+                        BackgroundColor="Transparent"
+                             Clicked="ToolbarItem_Clicked" />
 
-                                <StackLayout  Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical">
-                                    <Image Source="{Binding ImagenVJp}" ></Image>
-                                    <Label Text="{Binding TituloTxt}"  FontSize="12"  />
-                                    
-                                    <Label Text="{Binding SinopsisTxt}" FontSize="12"/>
-                                </StackLayout>
-                            </Grid>
+                </StackLayout>
 
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+
+
+
+                <Frame  Grid.Row="1"   Grid.Column="0" CornerRadius="30"  BackgroundColor="#CC121212"  HeightRequest="175" WidthRequest="200">
+                    <StackLayout Grid.Row="1"  Grid.Column="1" HorizontalOptions="Center" WidthRequest="175" Orientation="Vertical" Padding="15"  TranslationY="-15" BackgroundColor="Transparent">
+                        <Button
+                                
+                                Text ="Halo Reach" 
+                                VerticalOptions="Center"
+                                BackgroundColor= "Transparent"
+                                 Clicked="ToolbarItem_Clicked" />
+
+                        <ImageButton 
+                             Source="halor"
+                             Clicked="ToolbarItem_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame  Grid.Row="1"   Grid.Column="1" CornerRadius="30"  BackgroundColor="#CC121212"  HeightRequest="175" WidthRequest="200">
+                    <StackLayout Grid.Row="1"  Grid.Column="2" HorizontalOptions="Center" WidthRequest="175" Orientation="Vertical" Padding="15"  TranslationY="-15" BackgroundColor="Transparent">
+                        <Button
+                                
+                                Text ="Halo Reach" 
+                                VerticalOptions="Center"
+                                BackgroundColor= "Transparent"
+                                 Clicked="ToolbarItem_Clicked" />
+
+                        <ImageButton 
+                             Source="halor"
+                             Clicked="ToolbarItem_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame  Grid.Row="2"   Grid.Column="0" CornerRadius="30"  BackgroundColor="#CC121212"  HeightRequest="175" WidthRequest="200">
+                    <StackLayout Grid.Row="1"  Grid.Column="1" HorizontalOptions="Center" WidthRequest="175" Orientation="Vertical" Padding="15"  TranslationY="-15" BackgroundColor="Transparent">
+                        <Button
+                                
+                                Text ="Halo Reach" 
+                                VerticalOptions="Center"
+                                BackgroundColor= "Transparent"
+                                 Clicked="ToolbarItem_Clicked" />
+
+                        <ImageButton 
+                             Source="halor"
+                             Clicked="ToolbarItem_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame  Grid.Row="2"   Grid.Column="1" CornerRadius="30"  BackgroundColor="#CC121212"  HeightRequest="175" WidthRequest="200">
+                    <StackLayout Grid.Row="1"  Grid.Column="2" HorizontalOptions="Center" WidthRequest="175" Orientation="Vertical" Padding="15"  TranslationY="-15" BackgroundColor="Transparent">
+                        <Button
+                                
+                                Text ="Halo Reach" 
+                                VerticalOptions="Center"
+                                BackgroundColor= "Transparent"
+                                 Clicked="ToolbarItem_Clicked" />
+
+                        <ImageButton 
+                             Source="halor"
+                             Clicked="ToolbarItem_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame  Grid.Row="3"   Grid.Column="0" CornerRadius="30"  BackgroundColor="#CC121212"  HeightRequest="175" WidthRequest="200">
+                    <StackLayout Grid.Row="1"  Grid.Column="1" HorizontalOptions="Center" WidthRequest="175" Orientation="Vertical" Padding="15"  TranslationY="-15" BackgroundColor="Transparent">
+                        <Button
+                                
+                                Text ="Halo Reach" 
+                                VerticalOptions="Center"
+                                BackgroundColor= "Transparent"
+                                 Clicked="ToolbarItem_Clicked" />
+
+                        <ImageButton 
+                             Source="halor"
+                             Clicked="ToolbarItem_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame  Grid.Row="3"   Grid.Column="1" CornerRadius="30"  BackgroundColor="#CC121212"  HeightRequest="175" WidthRequest="200">
+                    <StackLayout Grid.Row="1"  Grid.Column="2" HorizontalOptions="Center" WidthRequest="175" Orientation="Vertical" Padding="15"  TranslationY="-15" BackgroundColor="Transparent">
+                        <Button
+                                
+                                Text ="Halo Reach" 
+                                VerticalOptions="Center"
+                                BackgroundColor= "Transparent"
+                                 Clicked="ToolbarItem_Clicked" />
+
+                        <ImageButton 
+                             Source="halor"
+                             Clicked="ToolbarItem_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

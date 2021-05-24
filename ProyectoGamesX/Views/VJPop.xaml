@@ -2,88 +2,36 @@
 <xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
-          
-           x:Class="ProyectoGamesX.Views.VJPop">
-
-
-   
-        <StackLayout Grid.Row="1" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" >
-            <Label
-                     Text="Titulo"
-                     FontSize="13"
-                     TextColor="Black"/>
-
-            <Frame
-                     HasShadow="true"
-                     Padding="6"
-                     CornerRadius="7"
-                     >
-
-                <Entry
-                    Placeholder="SGeshin Impact"
-                    MaxLength="25"
-                    Keyboard="Text"
-                    FontSize="15"
-                    Text="{Binding TituloTxt, Mode=TwoWay}"
-                    />
-
-            </Frame>
+          Size="500,500"
+           x:Class="ProyectoGamesX.Views.VJPop"
+           BackgroundColor="Black" >
 
 
 
 
 
-            <StackLayout WidthRequest="140">
 
-                <Label
-                     Text="Sinopsis"
-                     FontSize="13"
-                     TextColor="Black"/>
+    
+        <StackLayout BackgroundColor= "Black">
 
-                <Frame
-                     HasShadow="True"
-                     Padding="6"
-                     CornerRadius="7"
-                     >
+            <Frame  Grid.Row="1"   CornerRadius="30"     BackgroundColor= "Transparent">
+                    <StackLayout Grid.Row="3"  HorizontalOptions="Center" WidthRequest="350"  BackgroundColor= "Transparent" >
 
-                    <Entry
-                    Placeholder="18"
-                    MaxLength="500"
-                    FontSize="15"
-                    Keyboard="Text"
-                    Text="{Binding SinopsisTxt, Mode=TwoWay}"
-                    />
+                        <StackLayout Grid.Row="1" HorizontalOptions="Center" WidthRequest="300" Orientation="Vertical" Padding="15" Grid.ColumnSpan="2">
+
+                            <Label   Text ="Halo Reach" TextColor="White" HorizontalTextAlignment="Start" FontSize="18" WidthRequest="300"/>
+                    <Image Source="like"  HeightRequest="25"  WidthRequest="25" HorizontalOptions="End" VerticalOptions="Start" TranslationY="-30"/>
+                    <Image Source="halor"  WidthRequest="150"  HorizontalOptions="Start"/>
+                   
+                            <Label   Text ="Sinopsis " TextColor="White" HorizontalTextAlignment="Start"  FontSize="18" WidthRequest="300"/>
+                    
+                    <Label   Text ="Halo: Reach es un videojuego de disparos en primera persona. Los jugadores asumen el papel de Noble 6, un supersoldado en combate contra un grupo alienígena conocida como el Covenant. El sistema de juego es más parecido al original de Halo 1 Combat Evolved que los juegos posteriores de la serie. " 
+                                     TextColor="White" HorizontalTextAlignment="Start" FontSize="15" WidthRequest="300"/>
+                        </StackLayout>
+                    </StackLayout>
 
                 </Frame>
             </StackLayout>
-
-
-
-
-
-
-
-            <StackLayout Grid.Row="8" HorizontalOptions="Center" Orientation="Vertical" >
-                <Button
-                     Text="Insert"
-                            TextColor="Black"
-                            Font="Montserrat-Medium.otf"
-                            FontSize="15"
-                            BackgroundColor="#fcfcfc"
-                            BorderColor="#f2f2f2"
-                            BorderWidth="1.5"
-                            WidthRequest="300"
-                            HeightRequest="50"
-                            CornerRadius="7"
-                            Command="{Binding InsertCommand}"
-                    />
-
-            </StackLayout>
-
-
-
-
-        </StackLayout>
 
     
 

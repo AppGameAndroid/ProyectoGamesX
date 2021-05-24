@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +11,17 @@ namespace ProyectoGamesX.Views
         public Favoritepage()
         {
             InitializeComponent();
+        }
+
+        private async void ToolbarItem_Clicked2(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"//VideojuegosPage");
+        }
+
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            Navigation.ShowPopup(new VJPop());
         }
     }
 }

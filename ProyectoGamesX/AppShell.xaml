@@ -3,7 +3,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:ProyectoGamesX.Views"
        Title="ProyectoGamesX"
-       x:Class="ProyectoGamesX.AppShell">
+       x:Class="ProyectoGamesX.AppShell"
+       >
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -24,6 +25,9 @@
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="black"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+
+                <Setter Property="Shell.FlyoutBackgroundColor" Value="Black"/>
+
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -40,8 +44,11 @@
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="#0071bc"></Setter>
             </Style>
+           
+            
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
+                    
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
@@ -63,7 +70,7 @@
             <!--
             Custom Style you can apply to any Flyout Item
             -->
-            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True" >
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
@@ -72,6 +79,8 @@
                                     <Setter Property="BackgroundColor" Value="#121212" />
                                     <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="Red" />
                                 </VisualState.Setters>
+
+                            
                             </VisualState>
                         </VisualStateGroup>
                     </VisualStateGroupList>
@@ -79,6 +88,9 @@
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
+
+
+    
 
     <!-- 
         When the Flyout is visible this defines the content to display in the flyout.
@@ -149,12 +161,7 @@
         content you can do so by calling 
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
-    </TabBar>
-    <TabBar>
-        <ShellContent Route="RegierPage" ContentTemplate="{DataTemplate local:RegisterPage}" />
-    </TabBar>
+    
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 
