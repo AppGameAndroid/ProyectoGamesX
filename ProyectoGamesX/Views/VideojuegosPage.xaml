@@ -52,7 +52,7 @@
                                  Clicked="ToolbarItem_Clicked" />
 
                         <ImageButton 
-                             Source="halor"
+                             Source="profile"
                              Clicked="ToolbarItem_Clicked" />
 
                     </StackLayout>
